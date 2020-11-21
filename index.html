@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Calculation</title>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="inkomst">
+        <h2>Inkomst:</h2>
+        <span class="inkomstData"><!-- innetText--> </span>
+        
+    </div>
+    <div class="kostnad">
+        <h2>kostnad:</h2>
+        <span class="kostnadsData"> <!-- innetText--> </span>
+        
+    </div>
+    <div class="Resultat">
+        <h2>vinst</h2>
+        <!-- innetText-->
+        <span class="totalt"></span>
+    </div>
+<form action="">
+    <select name="" id="selectOption">
+        <option value="+">+</option>
+        <option value="-">-</option>
+    </select>
+
+    <input type="text" id="description">
+    <input type="number" id="value">
+
+    <button class="add">Add</button>
+</form>
+
+<div class="inomstlista">
+    <h2>inkomstlista</h2>
+    
+    <ul class="listaIncome"></ul>
+    <!--skapa ett hel element med js ex ul/li. elementet ska ha beskrivning och value (object?)-->
+    
+</div>
+
+<div class="kostnadslista">
+    <h2>Kostnadslista</h2>
+    <ul class="listaKostnad"></ul>
+    <!--skapa ett hel element med js ex ul/li. elementet ska ha beskrivning och value (object?)-->
+
+</div>
+<button class="rensa">rensa</button>
+</body>
+</html>
