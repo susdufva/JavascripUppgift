@@ -1,6 +1,5 @@
 // inkomst och kostnads div måste läsas med query selector 
 //uppdatera den med användarens inmatade data med ex textContent
-
 //form data måste läsas när användare trycker på add (eventlistener + function)
 
 //inkomst o kostnadslista ska uppdateras med nya element. elementet ska ha beskrivining och kostnad (key: value) !!kolla föreläsning 18/11 sista 30!! 
@@ -10,40 +9,30 @@
 //samma med kostnads array
 // inkomstArray - kostnadsArray = totalt/kvar
 //eller allt i ett [1000, 25000, - 200, -5000,] = totalt
-var arrayAll = [1000, 25000, - 200, -5000,]
-for (var i=0; i<arrayAll.length; i++){
-    console.log(arrayAll[i])}
-    var summan = 0;
-    for(var i=0; i<arrayAll.length; i++ ){
-        summan += arrayAll[i]; console.log(summan)
-    } //Testa (+ return summan? nej)
-    //från början är arrayAll = []
-    //använd array.push()
 
     //skapa en funktion som matar in olika data i alla divar vid button add 
-    var vinstLista = [];
-    var kostnadsLista = [];
-    var inkomstLista = [];
+    //från början är arrayAll = []
+    //använd array.push()
+    var resultList = [];
+    var expenseList = [];
+    var incomeList = [];
     function countTotal(event){
         event.preventDefault(); //"sparar" det vi lagt till på sidan iställer för uppdate nollställ 
-        console.log("test")//bara för att se att anropning funkar 
-        //olika funktion för + / -
+        //console.log("test")//bara för att se att anropning funkar 
      var options = document.querySelector("#selectOption")
      if (options.value === "+"){
-         //plus options kod
         var description = document.querySelector("#description").value
         var value = document.querySelector("#value").value
-        var inkomstData = document.querySelector(".inkomstData")
-        inkomstData.textContent = value;
+        var incomeData = document.querySelector(".incomeData")
+        incomeData.textContent = value;
         var li = document.createElement("li")
-        li.innerText = description + " : " + value; // : är bara text i html ej nödvändig 
-        var ul = document.querySelector(".listaIncome") //kolla rätt klass
+        li.innerText = description + " : " + value; // : är bara text i html ej nödvändigt 
+        var ul = document.querySelector(".listIn") 
         ul.appendChild(li);
          //li från variabeln 
-        //pusha value in i vinst lista
-        vinstLista.push(Number(value)) //värdet skrivs som nummer 
-        //även minus fältete ska pusha till vinstLista
-        inkomstLista.push(Number(value))
+        //pusha value in i resultat listan
+        resultList.push(Number(value)) //värdet skrivs som nummer 
+        incomeList.push(Number(value))
 
 
      }
@@ -51,53 +40,49 @@ for (var i=0; i<arrayAll.length; i++){
         // kod för minus 
         var description = document.querySelector("#description").value
         var value = document.querySelector("#value").value
-        vinstLista.push(Number(-value)) //minus före value för avdrag av värde
-        kostnadsLista.push(Number(-value))
-        var kostnadsData = document.querySelector(".kostnadsData")
-        kostnadsData.textContent = value;
+        resultList.push(Number(-value)) //minus före value för avdrag av värde
+        expenseList.push(Number(-value))
+        //även minus fältet ska pusha till resultat listan
+        var expenseData = document.querySelector(".expenseData")
+        expenseData.textContent = value;
         var li = document.createElement("li");
         li.textContent = description + " " + value;
-        var ul = document.querySelector(".listaKostnad")
+        var ul = document.querySelector(".listOut")
         ul.appendChild(li)
         
      }
-     var  summa = 0
-     for(var i=0; i<vinstLista.length; i++){
-         summa += vinstLista[i];
+     var amount = 0
+     for(var i=0; i<resultList.length; i++){
+         amount += resultList[i];
      }
-     var totalt = document.querySelector(".totalt")
-     totalt.textContent = summa;
-     if(summa<0){
+     var total = document.querySelector(".total")
+     total.textContent = amount;
+     if(amount<0){
          alert("Du ligger minus")
      }
-     
-     var kostnad = 0
-     for(var k=0; k<kostnadsLista.length; k++){
-         kostnad += kostnadsLista[k];
+     var expense = 0
+     for(var i=0; i<expenseList.length; i++){
+         expense += expenseList[i];
      }
-     var countKostnad = document.querySelector(".kostnadsData")
-     countKostnad.textContent = kostnad;
+     var countExpense = document.querySelector(".expenseData")
+     countExpense.textContent = expense;
 
-     var inkomst = 0
-     for(var i=0; i<inkomstLista.length; i++){
-        inkomst += inkomstLista[i];
+     var income = 0
+     for(var i=0; i<incomeList.length; i++){
+        income += incomeList[i];
      }
-     var countInkomst = document.querySelector(".inkomstData")
-     countInkomst.textContent = inkomst;
+     var countIncome = document.querySelector(".incomeData")
+     countIncome.textContent = income;
 
      //en forloop var för att räkna ihop varje span
 
-
-     
         //vid plus uppdateras inkomstfält *2 och vinst
         //vid miunus uppdateras utgifter *2 och vinst 
         //vinst: 
         //skapa element med create och pusha in i inkomstlista
-
-         //vinst lägger vi utanför i en array 
     }
 
-    function rensa (){
+    function clear (){
         location.reload();
         //localstorage.clean()
     }
@@ -105,5 +90,5 @@ for (var i=0; i<arrayAll.length; i++){
    var add = document.querySelector(".add")
    add.addEventListener("click", countTotal)
 
-   var clean = document.querySelector(".rensa")
-   clean.addEventListener("click", rensa)
+   var clean = document.querySelector(".clear")
+   clean.addEventListener("click", clear)

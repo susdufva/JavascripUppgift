@@ -1,0 +1,7 @@
+var arrayAll = [1000, 25000, - 200, -5000,]
+for (var i=0; i<arrayAll.length; i++){
+    console.log(arrayAll[i])}
+    var summan = 0;
+    for(var i=0; i<arrayAll.length; i++ ){
+        summan += arrayAll[i]; console.log(summan)
+    } 
