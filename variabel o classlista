@@ -27,84 +27,29 @@ HTML
 
 
          -- JS --
-
-var arrayAll = [1000, 25000, - 200, -5000,]
-for (var i=0; i<arrayAll.length; i++){
-    console.log(arrayAll[i])}
-    var summan = 0; ändra till -- amount/
-    for(var i=0; i<arrayAll.length; i++ ){
-        summan += arrayAll[i]; console.log(summan)
-    } 
-  
+ 
     var vinstLista = []; -- resultList
     var kostnadsLista = []; -- expenseList
     var inkomstLista = []; -- incomeList
-    function countTotal(event){
-        event.preventDefault();
-        console.log("test")//bara för att se att anropning funkar 
-     var options = document.querySelector("#selectOption")
-     if (options.value === "+"){
-        var description = document.querySelector("#description").value
-        var value = document.querySelector("#value").value
-        var inkomstData = document.querySelector(".inkomstData") -- incomeData
-        inkomstData.textContent = value;  -- incomeData
-        var li = document.createElement("li")
-        li.innerText = description + " : " + value; 
-        var ul = document.querySelector(".listaIncome")  -- listIn 
-        ul.appendChild(li);
-        vinstLista.push(Number(value))  -- resultList
-        inkomstLista.push(Number(value)) --  incomeList
-
-
-     }
-     else if (options.value === "-"){
-   
-        var description = document.querySelector("#description").value
-        var value = document.querySelector("#value").value
-        vinstLista.push(Number(-value)) -- resultList
-        kostnadsLista.push(Number(-value)) -- expenseList
-        var kostnadsData = document.querySelector(".kostnadsData") -- expenseData
-        kostnadsData.textContent = value; -- expenseData
-        var li = document.createElement("li");
-        li.textContent = description + " " + value;
-        var ul = document.querySelector(".listaKostnad") -- listOut
-        ul.appendChild(li)
-        
-     }
-     var  summa = 0 -- amount 
-     for(var i=0; i<vinstLista.length; i++){
-         summa += vinstLista[i]; -- resultList
-     }
-     var totalt = document.querySelector(".totalt") -- total
-     totalt.textContent = summa;
-     if(summa<0){
-         alert("Du ligger minus")
-     }
-     
-     var kostnad = 0  -- expenseList
-     for(var k=0; k<kostnadsLista.length; k++){
-         kostnad += kostnadsLista[k];
-     }
-     var countKostnad = document.querySelector(".kostnadsData")
-     countKostnad.textContent = kostnad;
-
-     var inkomst = 0 -- income  -- incomeList
-     for(var i=0; i<inkomstLista.length; i++){
-        inkomst += inkomstLista[i];
-     }
-     var countInkomst = document.querySelector(".inkomstData") -- countIncome
-     countInkomst.textContent = inkomst;
-
-    }
-
-    function rensa (){ --clear
-        location.reload();
-        //localstorage.clean()
-    }
-   
-   var add = document.querySelector(".add")
-   add.addEventListener("click", countTotal)
-
-   var clean = document.querySelector(".rensa") --clear
-   clean.addEventListener("click", rensa)
+    var options = document.querySelector("#selectOption")
+    var description = document.querySelector("#description").value
+    var value = document.querySelector("#value").value
+    var inkomstData = document.querySelector(".inkomstData") -- incomeData
+    var ul = document.querySelector(".listaIncome")  -- listIn 
+    vinstLista.push(Number(value))  -- resultList
+    inkomstLista.push(Number(value)) --  incomeList
+    var description = document.querySelector("#description").value
+    var value = document.querySelector("#value").value
+    kostnadsLista.push(Number(-value)) -- expenseList
+    var kostnadsData = document.querySelector(".kostnadsData") -- expenseData
+    var li = document.createElement("li");
+    var ul = document.querySelector(".listaKostnad") -- listOut 
+    var  summa = 0 -- amount 
+    var kostnad = 0  -- expense
+    var countKostnad = document.querySelector(".kostnadsData") -- countExpense
+    var inkomst = 0 -- income  -- incomeList
+    var countInkomst = document.querySelector(".inkomstData") -- countIncome
+    var add = document.querySelector(".add")
+    var clean = document.querySelector(".rensa") --clear
+ 
 
