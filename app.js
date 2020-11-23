@@ -52,8 +52,26 @@
     var total = document.querySelector(".total")
      total.textContent = amount;
      if(amount<0){
-         alert("Du ligger minus")
+        // alert("Du ligger minus")
+        popup();
      }
+     function popup () {
+        var cover = document.createElement("div"); //behövs som parent till popup diven 
+        cover.classList.add('cover'); //lägger till class till diven 
+        var alert = document.createElement("div"); //div till popup rutan
+        alert.classList.add('alert'); //skapar class alert 
+        var text = document.createElement("span");
+        text.textContent = "Varning, du ligger minus!";
+    
+        var btn = document.createElement("button");
+        btn.textContent="stäng";
+        btn.onclick = () => cover.remove(); //stänger popup rutan
+    
+        alert.appendChild(text);
+        alert.appendChild(btn);
+        cover.appendChild(alert);
+        document.body.appendChild(cover); //täcker ursprungs documentet 
+    }
     var expense = 0 //loppar igenom och ger ett totalt värde för alla minus
      for(var i=0; i<expenseList.length; i++){
          expense += expenseList[i];
