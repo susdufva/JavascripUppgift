@@ -7,54 +7,79 @@
     <script src="app.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <meta name="author" content="Susanna Dufva">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <header>
 
 </header>
 <body>
 
-    <div class="income">
-        <h2>inkomster:</h2>
-        <span class="incomeData"><!-- textContent--> </span>
-        
-    </div>
-    <div class="expense">
-        <h2>kostnader:</h2>
-        <span class="expenseData"> <!-- textContent--> </span>
-        
-    </div>
-    <div class="Result">
-        <h2>Totalt kvar:</h2>
-        <!-- textContent-->
-        <span class="total"></span>
-    </div>
-<form action="">
-    <select name="" id="selectOption">
-        <option value="+">+</option>
-        <option value="-">-</option>
-    </select>
+    <div id="left"></div>
+    <div id="right">
+        <div class="container">
+            <h1>Budgetkalkyl</h1>
+            <p class="info">Här kan du räkna ut din månadsbudget. Ange dina inkomster och utgifter i fältet nedan. </p>
+            <div id="form">
+            
+                <form action="">
+                    <select name="" id="selectOption">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                    </select>
 
-    <input type="text" id="description">
-    <input type="number" id="value">
+                    <input type="text" id="description" placeholder="Typ">
+                    <input type="number" id="value" placeholder="Värde">
 
-    <button class="add">Add</button>
-</form>
+                    <button class="add">Lägg till</button>
+                </form>
 
-<div class="incomeList">
-    <h2>inkomstlista</h2>
-    <ul class="listIn"></ul>
-    <!--createElement med js ul/li. elementet ska ha description och value -->
+                <div class="count">  
+                    <div class="income">
+                        <p>
+                            <span class="incomeData nummer">0<!-- textContent--></span>
+                            <span class="text">inkomster</span>
+                        </p>
+                        
+                    </div>
+
+                    <div class="expense">
+                        <p>
+                            <span class="expenseData nummer">0<!-- textContent--></span>
+                            <span class="text">kostnader</span> 
+                        </p>
+                    </div>
+
+                    <div class="Result">
+                        <p>
+                            <span class="total nummer">0</span>
+                            <span class="text">Totalt kvar</span> 
+                        </p>
+                    </div>
+                </div> 
+
+                <div class="list">
+                    <div class="incomeList">
+                        <h3>Inkomstlista</h3>
+                        <ul class="listIn"></ul>
+                        <!--createElement med js ul/li. elementet ska ha description och value -->
+                    </div>
+
+                    <div class="expenseList">
+                        <h3>Kostnadslista</h3>
+                        <ul class="listOut"></ul>
+                        <!--Create element med js ul/li. elementet ska ha description och value -->
+                    </div>
+                </div>
+                <p class="clearbutton">
+                    <button class="clear">Rensa</button>
+                </p>
+            </div>
+        </div>
     
-</div>
+    </div>
 
-<div class="expenseList">
-    <h2>Kostnadslista</h2>
-    <ul class="listOut"></ul>
-    <!--Create element med js ul/li. elementet ska ha description och value -->
-
-</div>
- <button class="clear">rensa</button>
-
+    
 </body>
 <footer>
     

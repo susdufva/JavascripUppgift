@@ -1,5 +1,9 @@
 HTML
-
+ div class container - runt hela
+ div class form i container
+ div class count runt input
+ div class list runt listor
+ 
  div class="inkomst"  ändra till -- income
  span class="inkomstData" ändra -- incomeData
         
@@ -51,5 +55,13 @@ HTML
     var countInkomst = document.querySelector(".inkomstData") -- countIncome
     var add = document.querySelector(".add")
     var clean = document.querySelector(".rensa") --clear
- 
+    
+    popup
+    var cover = document.createElement("div"); 
+    cover.classList.add('cover'); -- class cover till css
+    var alert = document.createElement("div");
+    alert.classList.add('alert'); -- class alert till css
+    var text = document.createElement("span");
+    var btn = document.createElement("button");
+    
 
