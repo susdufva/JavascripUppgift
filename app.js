@@ -24,7 +24,7 @@
         var incomeData = document.querySelector(".incomeData")
         incomeData.textContent = value;
         var li = document.createElement("li") //Skapar lista i HTML
-        li.innerText = description + " : " + value +"kr"; // : är bara text i html ej nödvändigt 
+        li.innerText = description + ": " + value +"kr"; // : är bara text i html ej nödvändigt 
         var ul = document.querySelector(".listIn") 
         ul.appendChild(li); //li från variabeln 
         resultList.push(Number(value)) //värdet skrivs som nummer
@@ -40,7 +40,7 @@
         var expenseData = document.querySelector(".expenseData")
         expenseData.textContent = value;
         var li = document.createElement("li"); //Skapar lista i HTML
-        li.textContent = description + " " + value +"kr"; //skriver namn & värdet in i listan
+        li.textContent = description + ": " + value +"kr"; //skriver namn & värdet in i listan
         var ul = document.querySelector(".listOut")
         ul.appendChild(li)
         
