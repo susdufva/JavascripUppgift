@@ -61,10 +61,10 @@
         var alert = document.createElement("div"); //div till popup rutan
         alert.classList.add('alert'); //skapar class alert 
         var text = document.createElement("span");
-        text.textContent = "Varning, du ligger minus!";
-    
+        text.textContent = "Varning! Din budget går back";
+
         var btn = document.createElement("button");
-        btn.textContent="stäng";
+        btn.textContent="Stäng";
         btn.onclick = () => cover.remove(); //stänger popup rutan
     
         alert.appendChild(text);

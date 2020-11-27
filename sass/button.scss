@@ -1,3 +1,21 @@
 .clearbutton{
     text-align: center;
-  }
+}
+
+.clear{
+    background: none;
+    border-radius: 3px;
+    border: solid 1px #4b4547;
+    color: #ce4380;/* #4b4547;*/
+}
+
+.add{
+    margin: 0;
+    white-space: nowrap;
+    background: #ce4380;
+    color: #FFF;
+    border: none;
+    padding: 7px 10px;
+    font-size: 18px;
+    margin: 0 4px;
+}

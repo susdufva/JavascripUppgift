@@ -1,0 +1,117 @@
+.container{
+    width: 25rem;
+}
+
+h1{
+    font-family: 'Josefin Sans', sans-serif;
+    color: #ce4380; /*rgb(207, 48, 141); (230, 52, 141)*/
+    margin: 0 0 10px;
+    font-size: 45px;
+    text-align: center;
+}
+@media (min-width: 768 px){
+h1{
+    font-size: 60px;
+}
+.info{
+    font-size: 19px;
+}
+.number{
+    font-size: 40px;
+}}
+  
+.info{
+    color: #5a5356;
+    font-size: 15px;
+    text-align: center;
+    margin: 0 0 25px 0;
+}
+  
+#left {
+    position: relative;
+    left: auto;
+    top:auto;
+    width: 100%;
+    height: 250px;
+    background-image: url(bilder/gris.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 250px;
+}
+  
+#right {
+    position: relative;
+    right: auto;
+    top:auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 0;
+}
+  
+@media (min-width: 900px){
+#left {
+    position: fixed;
+    left: 0px;
+    top:0px;
+    width: 50%;
+    height: 100%;
+    background-position: right;
+    background-size: 500px;
+}
+  
+#right {
+    position: absolute;
+    right: 0px;
+    top:0px;
+    width: 50%;
+    height: 100%;
+    justify-content: flex-start;
+}}
+
+select, input{
+    margin: 0 4px;
+    border: solid 1px #CCC;
+    font-size: 18px;
+    padding: 5px;
+  }
+  
+  input{
+    width: 30%;
+}
+
+.number{
+    font-size: 30px;
+    color: #ce4380/*rgb(207, 48, 141)*/;
+}
+  
+.number::after {
+    content: "kr"; 
+    font-size: 20px;
+}
+  
+.number.total{
+    font-weight: bold;
+}
+.text{
+    display: block;
+    font-size: 18px;
+    color: #5a5356;
+}
+form{
+    display: flex;
+    background: #FFF;
+    padding: 15px;
+    border-radius: 4px;
+}  
+.count{
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 20px;
+      font-family: 'Josefin Sans', sans-serif;
+}
+.count p{
+    text-align: center;
+}
