@@ -1,3 +1,6 @@
+@charset "UTF-8";
+/*fonts font-family: 'Josefin Sans', sans-serif;
+font-family: 'PT Sans', sans-serif;*/
 /*fonts font-family: 'Josefin Sans', sans-serif;
 font-family: 'PT Sans', sans-serif;*/
 body {
@@ -7,6 +10,9 @@ body {
 
 .container {
   margin: 0; }
+
+.container {
+  width: 25rem; }
 
 h1 {
   font-family: 'Josefin Sans', sans-serif;
@@ -70,55 +76,6 @@ h1 {
   .container {
     margin: auto 0; } }
 
-.cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(168, 168, 168, 0.397); }
-
-.alert {
-  width: auto;
-  height: auto;
-  display: flex;
-  padding: 20px;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: white;
-  border: solid 1.5px #CCC;
-  border-radius: 3px;
-  font-size: large;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif; }
-
-.alert span {
-  text-align: center;
-  margin: 20px;
-  color: #5a5356; }
-
-button {
-  background: #ce4380;
-  color: #ffffff;
-  padding: 4.5px 10px;
-  border: solid 1px #5c1835;
-  border-radius: 2px;
-  margin-bottom: 5px; }
-
-.add {
-  margin: 0;
-  white-space: nowrap;
-  background: #ce4380;
-  color: #FFF;
-  border: none;
-  padding: 7px 10px;
-  font-size: 18px;
-  margin: 0 4px; }
-
 select, input {
   margin: 0 4px;
   border: solid 1px #CCC;
@@ -127,16 +84,6 @@ select, input {
 
 input {
   width: 30%; }
-
-.clearbutton {
-  text-align: center; }
-
-.clear {
-  background: none;
-  border-radius: 3px;
-  border: solid 1px #4b4547;
-  color: #ce4380;
-  /* #4b4547;*/ }
 
 .number {
   font-size: 30px;
@@ -201,5 +148,62 @@ form {
   padding: 0;
   margin: 0 0 0 15px; }
 
-.container {
-  width: 25rem; }
+.add {
+  margin: 0;
+  white-space: nowrap;
+  background: #ce4380;
+  color: #FFF;
+  border: none;
+  padding: 7px 10px;
+  font-size: 18px;
+  margin: 0 4px; }
+
+.clearbutton {
+  text-align: center; }
+
+.clear {
+  background: none;
+  border-radius: 3px;
+  border: solid 1px #4b4547;
+  color: #ce4380;
+  /* #4b4547;*/ }
+
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(168, 168, 168, 0.397); }
+
+.alert {
+  width: auto;
+  height: auto;
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border: solid 1.5px #CCC;
+  border-radius: 3px;
+  font-size: large;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif; }
+
+.alert span {
+  text-align: center;
+  margin: 20px;
+  color: #5a5356; }
+
+button {
+  /*stäng knapp*/
+  background: #ce4380;
+  color: #ffffff;
+  padding: 4.5px 10px;
+  border: solid 1px #5c1835;
+  border-radius: 2px;
+  margin-bottom: 5px; }

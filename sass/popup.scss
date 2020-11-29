@@ -1,4 +1,4 @@
-.cover{
+.cover {
     position: absolute;
     top: 0;
     left: 0;
@@ -8,9 +8,9 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(168, 168, 168, 0.397);
-    border: solid 2px, black;
-}
-.alert{
+ }
+  
+  .alert {
     width: auto;
     height: auto;
     display: flex;
@@ -19,28 +19,24 @@
     align-items: center;
     flex-direction: column;
     background-color: white;
-    border: solid 1px #CCC;
+    border: solid 1.5px #CCC;
     border-radius: 3px;
-    font-size: x-large;
+    font-size: large;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif  
-}
+    font-family: Arial, Helvetica, sans-serif; }
 
-@media (min-width: 768px){
-    .alert span{
-        font-size: x-large;
-}}
-  
 .alert span{
     text-align: center;
-    font-size: 20px;
+    margin: 20px;
+    color: #5a5356;
 }
-button{
-    margin-top: 20px;
+
+  
+  button{ /*stäng knapp*/
     background: #ce4380;
     color: #ffffff;
     padding: 4.5px 10px;
-    border: solid 2px rgba(37, 37, 37, 0.699);
+    border: solid 1px #5c1835;
     border-radius: 2px;  
-    margin: auto;
-}
+    margin-bottom: 5px;
+  }

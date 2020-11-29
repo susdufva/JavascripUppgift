@@ -1,7 +1,7 @@
 // inkomst och kostnads div måste läsas med query selector 
 //uppdatera den med användarens inmatade data med ex textContent
 //form data måste läsas när användare trycker på add (eventlistener + function)
-//inkomst o kostnadslista ska uppdateras med nya element. elementet ska ha beskrivining och kostnad (key: value) !!kolla föreläsning 18/11 sista 30!! 
+//inkomst o kostnadslista ska uppdateras med nya element. elementet ska ha beskrivining och kostnad (key: value)
 // användare måste mata in flera olika data (array) push.lista
 //inkomst array [1000,25000] loopa igenom för att räkna total
 //samma med kostnads array
@@ -13,10 +13,11 @@
     var resultList = []; //fr början är alla array = [], använd sen array.push()
     var expenseList = [];
     var incomeList = [];
+
     function countTotal(event){
         event.preventDefault(); //"sparar" det vi lagt till på sidan iställer för update nollställ 
         //console.log("test")//bara för att se att anropning funkar 
-     var options = document.querySelector("#selectOption")
+      var options = document.querySelector("#selectOption")
      if (options.value === "+"){
         //kod för val av plus
         var description = document.querySelector("#description").value

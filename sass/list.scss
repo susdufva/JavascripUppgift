@@ -1,35 +1,36 @@
 .list::after {
     content: "";
-    background: #ffffffe7;
+    background: #fad8d9cb;
     height: 100%;
     width: 1px;
     position: absolute;
     top: 0px;
     left: 50%;
-}
-.list{
+  }
+  .list{
     display: flex;
     justify-content: space-evenly;
     color: white;
-    border-top: solid 1px #ffffffe7;
+    border-top: solid 1px #fad8d9dc;
     position: relative;
     margin-top: 15px;
-}
+  }
   
-.list ul{
+  .list ul{
     margin: 0;
     padding: 0;
-}
+  }
   
-.list h3{
+  .list h3{
     color: white;
     font-weight: normal;
     border-bottom: 1.5px solid  #ce4380;
     display: inline-block;
     margin: 1em 0.3em;
-}
+  }
   
-.list ul li{
+  .list ul li{
     padding: 0;
     margin: 0 0 0 15px;
-}
+  }
+  
